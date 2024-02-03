@@ -18,10 +18,10 @@ async function getResponse(req) {
         <h1>Interactive Audio Page</h1>
     
         <!-- Interactive Button -->
-        <button id="playPauseButton">Play/Pause Audio</button>
+        <button id="playPauseButton" onclick="startAudio()">Play Audio</button>
     
         <!-- OpenGraph Audio Tag -->
-        <audio id="audioPlayer" controls autoplay>
+        <audio id="audioPlayer" controls>
             <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
             Your browser does not support the audio tag.
         </audio>
@@ -29,11 +29,18 @@ async function getResponse(req) {
         <script>
             const audioPlayer = document.getElementById('audioPlayer');
             const playPauseButton = document.getElementById('playPauseButton');
-    
+            
+            function startAudio() {
+                audioPlayer.play().then(() => {
+                    playPauseButton.textContent = 'Pause Audio';
+                }).catch(error => {
+                    console.error('Error starting audio playback:', error);
+                });
+            }
+
             playPauseButton.addEventListener('click', () => {
                 if (audioPlayer.paused) {
-                    audioPlayer.play();
-                    playPauseButton.textContent = 'Pause Audio';
+                    startAudio();
                 } else {
                     audioPlayer.pause();
                     playPauseButton.textContent = 'Play Audio';
