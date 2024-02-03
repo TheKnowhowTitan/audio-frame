@@ -3,7 +3,7 @@ import { getFrameMetadata } from '@coinbase/onchainkit';
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: "Next" 
+      label: "Play Audio" 
     },
   ],
   image: 'https://www.lifewire.com/thmb/K0oF6bk8jsXRJFUFma5pNo7xjyc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Goalfor2020FunnyMeme-04eadff55a17489a85453238481fe36e.jpg',
@@ -13,11 +13,11 @@ const frameMetadata = getFrameMetadata({
 });
 
 export const metadata = {
-  title: 'Meme Frame',
-  description: 'Meme Frame',
+  title: 'A basic audio frame',
+  description: 'A basic audio frame',
   openGraph: { 
-    title: 'Meme Frame',
-    description: 'Meme Frame',
+    title: 'Audio frame',
+    description: 'Audio Frame',
     images: ['https://media.sproutsocial.com/uploads/meme-example.jpg'],
   },
   other: {
