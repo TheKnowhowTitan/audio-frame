@@ -9,7 +9,7 @@ const frameMetadata = getFrameMetadata({
   image: 'https://www.lifewire.com/thmb/K0oF6bk8jsXRJFUFma5pNo7xjyc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Goalfor2020FunnyMeme-04eadff55a17489a85453238481fe36e.jpg',
 
   //which api to call when we click next button
-  post_url: 'your_url_here',
+  post_url: 'https://meme-fram.vercel.app/api',
 });
 
 export const metadata = {
